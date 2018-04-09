@@ -1,0 +1,9 @@
+#branch_qos.txt
+
+class-map match-all VOIP  
+match ip dscp ef
+
+policy-map WAN_SHAPER  
+class VOIP  
+priority percent 20  
+class class-default
